@@ -10,8 +10,7 @@ public class Cours implements ICours {
     private String niveau;
     private boolean necessiteProjecteur;
 
-    
-    public Cours(String matiere, String enseignant, String salle, String date, 
+    public Cours(String matiere, String enseignant, String salle, String date,
                  String heureDebut, boolean estOptionnel, String niveau, boolean necessiteProjecteur) {
         this.matiere = matiere;
         this.enseignant = enseignant;
@@ -30,10 +29,18 @@ public class Cours implements ICours {
 
     @Override
     public double getDuree() {
-        return 1.5; 
+        return 1.5;
     }
-    
-    
+
+    // Getters utilisés par les tests (attention aux noms exacts)
     public String getMatiere() { return matiere; }
     public String getEnseignant() { return enseignant; }
+
+    // autres getters si besoin
+    public String getSalle() { return salle; }
+    public String getDate() { return date; }
+    public String getHeureDebut() { return heureDebut; }
+    public boolean isEstOptionnel() { return estOptionnel; }
+    public String getNiveau() { return niveau; }
+    public boolean isNecessiteProjecteur() { return necessiteProjecteur; }
 }
